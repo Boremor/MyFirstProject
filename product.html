@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Cactus-Care.com</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link type="text/css" rel="stylesheet" href="css/remodal.css">
+	<link type="text/css" rel="stylesheet" href="css/remodal-default-theme.css">
+	<link type="text/css" rel="stylesheet" href="css/media.css">
+	<script src="https://kit.fontawesome.com/7dd7cf89b9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="remodal-bg">
+	<div class="login remodal" data-remodal-id="login" style="background: url('img/BG.png')">
+		<button data-remodal-action="close" class="remodal-close "></button>
+		<form action="" method="post">
+			<div class="form-group">
+				<label for="login-lg">Логин</label>
+				<input type="text" id="login-lg" name="login" placeholder="Логин">
+			</div>
+			<div class="form-group">
+				<label for="password-lg">Пароль</label>
+				<input type="password" id="password-lg" name="password" placeholder="Пароль">
+			</div>
+			<input type="submit" value="Войти">
+		</form>
+	</div>
+</div>
+<section>
+	<div class="logo">
+		<a href="index.html"><img src="img/logo.png" alt="cactus-care"></a>
+	</div>
+</section>
+	<header>
+		<nav>
+			<input type="checkbox" id="checkbox-menu">
+			<label for="checkbox-menu">
+				<div class="nav-top">
+					<ul class="menu touch">
+						<li><a href="#">Доставка</a></li>
+						<li><a href="#">О магазине</a></li>
+						<li><a href="#">Омск</a></li>
+						<li><a href="#" data-remodal-target="login">Войти</a> / <a href="registration.html">Регистрация</a></li>
+						<li><a href="#"><i class="fas fa-shopping-basket"></i></a></li>
+					</ul>
+				</div>
+				<div class="nav-bottom">
+					<ul class="menu touch">
+						<li id="category"><a href="index.html">Каталог</a>
+							<div class="category">
+								<ul>
+									<li><a href="#">Маски</a></li>
+									<li><a href="#">Крема</a>
+										<ul>
+											<li><a href="#">Для лица</a>
+												<ul>
+													<li><a href="#">Для взрослых</a></li>
+													<li><a href="#">Для детей</a></li>
+													<li><a href="#">Для женщин</a></li>
+													<li><a href="#">Для мужчин</a></li>
+												</ul>
+											</li>
+											<li><a href="#">Для ног</a></li>
+											<li><a href="#">Для рук</a></li>
+										</ul>
+									</li>
+									<li><a href="#">Лаки</a></li>
+									<li><a href="#">Помады</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="reviews.html">Отзывы</a></li>
+						<li><a href="#">Сотрудничество</a></li>
+					</ul>
+				</div>
+				<span class="toggle"><i class="fas fa-bars"></i></span>
+			</label>
+		</nav>
+	</header>
+	<section>
+		<div class="search">
+			<input type="text" placeholder="Поиск"><button>Найти</button>
+		</div>
+	</section>
+	<main>
+		<section>
+			<div class="product">
+				<h2 class="product-title">Faccion Mask</h2>
+				<div class="product-img">
+					<div class="main-img">
+						<img  src="img/1.jpg" alt="">
+					</div>
+				</div>
+				<p class="product-sale">50%</p>
+				<p class="product-price">Цена: 50р.</p>
+				<div class="product-content">
+					<p>Масочки, привезенные мною из Германии</p>
+					<p>🍇Маска для лица с экстрактом черники и йогурта - успокаивающее и восстанавливающее действие.Маска для лица с экстрактом черники и йогурта - успокаивающее и восстанавливающее действие.Маска для лица с экстрактом черники и йогурта - успокаивающее и восстанавливающее действие.</p>
+					<p>🍷Маска для лица с экстрактом вина - помогает минимизировать преждевременные признаки старения.</p>
+					<p>🌹Маска для лица с экстрактом дикой розы с витамином С - помогает улучшить естественное сияние кожи.</p>
+				</div>
+				<label for="quantity">Количество</label>
+				<input type="number" min="1" step="1" value="1" name="quantity" id="quantity">
+				<a href="#" class="add-to-cart">Добавить в карзину</a>
+			</div>
+		</section>
+		<section>
+			<div class="review-form">
+				<h2>Здесь вы може оставить свой отзыв о продукте</h2>
+				<form action="" method="post">
+					<div class="form-group">
+						<label for="name">Имя</label>
+						<input type="text" name="name" id="name" placeholder="Имя">
+					</div>
+					<div class="form-group">
+						<label for="review">Ваш отзыв</label>
+						<textarea name="review" id="review" placeholder="Ваш отзыв"></textarea>
+					</div>
+					<input type="submit" value="Отправить">
+				</form>
+			</div>
+		</section>
+		<section>
+			<div class="reviews">
+				<div class="review">
+					<span class="review-name">Борис</span>
+					<span class="review-date">27.11.2019 18:04</span>
+					<p>Какой-то текст написанный пользователем</p>
+				</div>
+				<div class="review">
+					<span class="review-name">Борис</span>
+					<span class="review-date">27.11.2019 18:04</span>
+					<p>Какой-то текст написанный пользователем</p>
+				</div>
+				<div class="review">
+					<span class="review-name">Борис</span>
+					<span class="review-date">27.11.2019 18:04</span>
+					<p>Какой-то текст написанный пользователем</p>
+				</div>
+				<div class="review">
+					<span class="review-name">Борис</span>
+					<span class="review-date">27.11.2019 18:04</span>
+					<p>Какой-то текст написанный пользователем</p>
+				</div>
+				<div class="review">
+				<span class="review-name">Борис</span>
+				<span class="review-date">27.11.2019 18:04</span>
+				<p>Какой-то текст написанный пользователем</p>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<div class="social-networks">
+			<a class="footer-btn link" href="https://www.instagram.com/cactus_care_55/" target="_blank"><i class="fab fa-instagram"></i></a>
+		</div>
+		<div>Powered by Boris Markin 2019</div>
+	</footer>
+	<script src="js/jquery-3.4.1.js"></script>
+	<script src="js/script.js"></script>
+	<script src="js/remodal.js"></script>
+</body>
+</html>

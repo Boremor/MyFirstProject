@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body style="background: url('img/BG.png')">
+<style>
+    .cart{
+        font-size: 20px;
+    }
+
+    .cart table {
+        width: 100%;
+        border-collapse: collapse;
+        line-height: 1.1;
+        color: #0C213B;
+    }
+    .cart caption {
+        font-size: 2em;
+        padding: 10px;
+        text-shadow: 1px 1px 0 rgba(0,0,0,.3);
+    }
+
+    .cart th {
+        background: #f5f5f5;;
+        padding: 10px;
+        border: 2px solid #000000;
+    }
+    .cart td {
+        font-size: 0.8em;
+        padding: 5px 7px;
+        border: 2px solid #000000;
+    }
+
+    .cart td  a{
+        text-decoration: none;
+        color: #000000;
+    }
+
+    .cart td a:hover{
+        color: #ffffff;
+        text-shadow: 0 6px 5px #000000;
+    }
+
+    .cart td i{
+        font-size: 20px;
+        color: #ed0b0e;
+        cursor: pointer;
+    }
+
+    .cart td img{
+        height: 140px;
+    }
+    @media screen and (max-width: 750px){
+    	.cart table {
+        border: 0;
+    }
+    .cart table thead {
+        display: none;
+    }
+    .cart table tr {
+        margin-bottom: 10px;
+        display: block;
+        border-bottom: 2px solid #000;
+    }
+    .cart table td {
+        display: block;
+        text-align: right;
+        font-size: 13px;
+        border-bottom: 1px dotted #ccc;
+        border-right: 2px solid #000000;
+    }
+    .cart table td:last-child {
+        border-bottom: 0;
+    }
+    .cart table td:before {
+        content: attr(data-label);
+        float: left;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    .cart td img{
+        width: 200px;
+    }
+    }
+</style>
+<div class="order cart" >
+    <table>
+        <thead>
+        <tr>
+            <th>Изображение</th>
+            <th>Наименование</th>
+            <th>Количество</th>
+            <th>Цена</th>
+            <th>Сумма</th>
+            <th><i class="fas fa-trash-alt"></th>
+        </tr>
+        </thead>
+        <tbody>
+        <?php foreach ($_SESSION['cart'] as $id => $item): ?>
+            <tr>
+                <td data-label="Изображение"><a href="product/<?= $item['alias']; ?>"><img src="img/<?= $item['img']; ?>" alt=""></a></td>
+                <td data-label="Наименование"><a href="product/<?= $item['alias']; ?>"><?= $item['title']; ?></a></td>
+                <td data-label="Количество"><?= $item['qty']; ?></td>
+                <td data-label="Цена"><?= $item['price']; ?> р.</td>
+                <td data-label="Сумма"><?= $item['price'] * $item['qty']; ?> р.</td>
+                <td data-label="Удалить" ><span data-id="<?=$id;?>" class="del-item"><i class="fas fa-trash-alt"></i></span></td>
+            </tr>
+        <?php endforeach; ?>
+        </tbody>
+        <tfoot>
+        <tr>
+            <td colspan="4">Итоговое количество</td>
+            <td class="cart-qty"><?= $_SESSION['cart.qty']; ?></td>
+        </tr>
+        <tr>
+            <td colspan="4">Итоговая сумма</td>
+            <td class="cart-sum"><?= $_SESSION['cart.sum']; ?> р.</td>
+        </tr>
+        </tfoot>
+    </table>
+</div>
+</body>
+</html>

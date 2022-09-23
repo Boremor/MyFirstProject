@@ -1,0 +1,131 @@
+@media screen and (max-width: 750px) {
+    .logo h1 a img{
+        margin: 0 -4px;
+        height: 40px;
+    }
+    .nav-bottom{
+        width: 100%;
+    }
+    .search{
+        margin: 0 auto;
+    }
+
+    .search input{
+        width: 200px;
+    }
+
+    .toggle{
+        clear: both;
+        display: block;
+        text-align: center;
+        width: 100%;
+        cursor: pointer;
+        line-height: 40px;
+        font-size: 18px;
+        border-top: 2px solid #000000;
+        background: url(../img/BG.png);
+    }
+    .toggle:hover{
+        border-color: #ffffff;
+        color: #ffffff;
+        text-shadow: 0 6px 5px #000000;
+    }
+    #checkbox-menu:checked + label .touch li{
+        opacity: 1;
+        visibility: visible;
+        transition: all .7s linear;
+    }
+    #checkbox-menu:checked + label .touch{
+        height: 280px;
+    }
+    .menu{
+        background: url(../img/BG.png);
+        background-size: 100%;
+    }
+    .menu{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 0;
+        transition: height .3s linear;
+    }
+    .menu li{
+        display: flex;
+        -ms-align-self: center;
+        align-self: center;
+        width: 95%;
+        opacity: 95%;
+        visibility: hidden;
+    }
+    .menu li a{
+        width: 95%;
+        text-align: center;
+        -ms-align-self: center;
+        align-self: center;
+        align-content: center;
+    }
+    .product-img{
+        height: 350px;
+    }
+
+    .product-sale{
+        right: 140px;
+    }
+
+    .main-img{
+        width: 300px;
+    }
+
+    .content{
+        width: 100%;
+    }
+
+    .card{
+        margin: 5px auto;
+        max-width: 300px;
+        max-height: 500px;
+    }
+
+    .card-link{
+        margin: 10px;
+        width: 90%;
+    }
+
+    .description-text{
+        white-space: nowrap;
+    }
+
+    .review{
+        max-width: 100%;
+    }
+    
+
+    .cart table {
+    border: 0;
+    }
+    .cart table thead {
+      display: none;
+    }
+    .cart table tr {
+      margin-bottom: 10px;
+      display: block;
+      border-bottom: 2px solid #000;
+    }
+    .cart table td {
+      display: block;
+      text-align: right;
+      font-size: 13px;
+      border-bottom: 1px dotted #ccc;
+      border-right: 1px solid transparent;
+    }
+    .cart table td:last-child {
+      border-bottom: 0;
+    }
+    .cart table td:before {
+      content: attr(data-label);
+      float: left;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+}
